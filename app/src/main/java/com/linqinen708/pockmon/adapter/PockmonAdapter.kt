@@ -1,8 +1,7 @@
 package com.linqinen708.pockmon.adapter
 
 import android.content.Context
-import android.widget.AutoCompleteTextView
-import android.widget.TextView
+import com.linqinen708.pockmon.constant.MyConstants
 import com.linqinen708.pockmon.R
 import com.linqinen708.pockmon.bean.PockmonBean
 import com.linqinen708.pockmon.databinding.LayoutAdapterPockmonBinding
@@ -18,20 +17,17 @@ class PockmonAdapter(context: Context?) : BasicBindingAdapter3<PockmonBean, Layo
     }
 
 
-    val QUALITY_GREEN: String = "绿"
-    val QUALITY_BLUE: String = "蓝"
-    val QUALITY_PURPLE: String = "紫"
-    val QUALITY_YELLOW: String = "金"
+
 
     override fun onBindItem(binding: LayoutAdapterPockmonBinding, item: PockmonBean) {
 
         binding.bean = item
 
         when {
-            item.quality!!.contains(QUALITY_GREEN) -> setTextColor(binding,R.color.green_00cc66)
-            item.quality!!.contains(QUALITY_BLUE) -> setTextColor(binding,R.color.blue_0093ff)
-            item.quality!!.contains(QUALITY_PURPLE) -> setTextColor(binding,R.color.purple_cc7903db)
-            item.quality!!.contains(QUALITY_YELLOW) -> setTextColor(binding,R.color.yellow_ebc708)
+            item.quality!!.contains(MyConstants.QUALITY_GREEN) -> setTextColor(binding,R.color.green_00cc66)
+            item.quality!!.contains(MyConstants.QUALITY_BLUE) -> setTextColor(binding,R.color.blue_0093ff)
+            item.quality!!.contains(MyConstants.QUALITY_PURPLE) -> setTextColor(binding,R.color.purple_cc7903db)
+            item.quality!!.contains(MyConstants.QUALITY_YELLOW) -> setTextColor(binding,R.color.yellow_ebc708)
         }
     }
 

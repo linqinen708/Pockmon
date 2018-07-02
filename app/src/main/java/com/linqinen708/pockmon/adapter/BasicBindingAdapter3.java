@@ -217,7 +217,7 @@ public abstract class BasicBindingAdapter3<M, B extends ViewDataBinding> extends
 
         @Override
         public void onItemRangeInserted(ObservableArrayList<M> newItems, int i, int i1) {
-            LogT.i("onItemRangeInserted:" + i + "--" + i1);
+//            LogT.i("onItemRangeInserted:" + i + "--" + i1);
             resetItems(newItems);
             notifyDataSetChanged();
         }
