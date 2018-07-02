@@ -33,7 +33,7 @@ android {
             def outputFile = output.outputFile
             if (outputFile != null && outputFile.name.endsWith('.apk')) {
                 //这里修改apk文件名
-                outputFileName = "Pockmon Data${defaultConfig.versionName}_${getTime()}.apk"
+                outputFileName = "Pockmon${defaultConfig.versionName}_${getTime()}.apk"
             }
         }
     }
