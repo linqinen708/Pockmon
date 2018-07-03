@@ -1,15 +1,16 @@
 package com.linqinen708.pockmon.adapter
 
 import android.content.Context
-import com.linqinen708.pockmon.constant.MyConstants
+import com.linqinen.library.adapter.BasicBindingAdapter
 import com.linqinen708.pockmon.R
 import com.linqinen708.pockmon.bean.PockmonBean
+import com.linqinen708.pockmon.constant.MyConstants
 import com.linqinen708.pockmon.databinding.LayoutAdapterPockmonBinding
 
 /**
  * Created by Ian on 2018/6/18.
  */
-class PockmonAdapter(context: Context?) : BasicBindingAdapter3<PockmonBean, LayoutAdapterPockmonBinding>(context) {
+class PockmonAdapter(context: Context?) : BasicBindingAdapter<PockmonBean, LayoutAdapterPockmonBinding>(context) {
 
 
     override fun getLayoutResId(viewType: Int): Int {
