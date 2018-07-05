@@ -25,6 +25,7 @@ class PockmonAdapter(context: Context?) : BasicBindingAdapter<PockmonBean, Layou
         binding.bean = item
 
         when {
+            item.quality!!.contains(MyConstants.QUALITY_WHITE) -> setTextColor(binding,R.color.white_ffffff)
             item.quality!!.contains(MyConstants.QUALITY_GREEN) -> setTextColor(binding,R.color.green_00cc66)
             item.quality!!.contains(MyConstants.QUALITY_BLUE) -> setTextColor(binding,R.color.blue_0093ff)
             item.quality!!.contains(MyConstants.QUALITY_PURPLE) -> setTextColor(binding,R.color.purple_cc7903db)

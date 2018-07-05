@@ -11,6 +11,7 @@ object MyConstants {
     val QUALITY_BLUE: String = "蓝"
     val QUALITY_VARIABLE_GREEN: String = "变异绿"
     val QUALITY_GREEN: String = "绿"
+    val QUALITY_WHITE: String = "白"
 
     var DP:Int = 0
 }
