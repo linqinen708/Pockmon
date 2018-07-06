@@ -36,6 +36,7 @@ class PockmonAdapter(context: Context?) : BasicBindingAdapter<PockmonBean, Layou
     private fun setTextColor(binding: LayoutAdapterPockmonBinding, colorId:Int){
         binding.name.setTextColor(context.getColor(colorId))
         binding.quality.setTextColor(context.getColor(colorId))
+        binding.star.setTextColor(context.getColor(colorId))
         binding.level.setTextColor(context.getColor(colorId))
         binding.strength.setTextColor(context.getColor(colorId))
         binding.defense.setTextColor(context.getColor(colorId))

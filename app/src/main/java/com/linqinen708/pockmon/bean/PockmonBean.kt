@@ -16,9 +16,13 @@ class PockmonBean(var id: Int?, var name: String?, var level: Int = 0, var quali
 //    }
 
 
+    var stars:Int = 0
+
     constructor(id: Int?, name: String?, level: Int = 0, stars: Int, quality: String?,
                 strength: String?, defense: String?, speed: String?
-                , hp: Int = 0, mp: Int = 0) : this(id, name, level, quality, strength, defense, speed, hp, mp)
+                , hp: Int = 0, mp: Int = 0) : this(id, name, level, quality, strength, defense, speed, hp, mp){
+        this.stars = stars
+    }
 
 
 
