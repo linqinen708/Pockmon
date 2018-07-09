@@ -13,5 +13,10 @@ object MyConstants {
     val QUALITY_GREEN: String = "绿"
     val QUALITY_WHITE: String = "白"
 
+    val SKILL_ADD_MP: String = "冥想，"
+    val SKILL_DOUBLE_EXP: String = "积蓄，"
+    val SKILL_ADD_HP_STRENGTH: String = "成长，"
+    val SKILL_DOUBLE_MONEY: String = "聚宝能力，"
+
     var DP:Int = 0
 }

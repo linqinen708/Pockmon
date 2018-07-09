@@ -12,7 +12,6 @@ import com.linqinen708.pockmon.adapter.PockmonAdapter
 import com.linqinen708.pockmon.bean.PockmonBean
 import com.linqinen708.pockmon.constant.MyConstants
 import kotlinx.android.synthetic.main.activity_main.*
-import java.text.Collator
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
@@ -67,6 +66,7 @@ class MainActivity : AppCompatActivity() {
         pockmonAdapter?.items?.add(PockmonBean(130, "嘎啦嘎啦", 48, "紫", "39", "37", "45", 127, 127))
         pockmonAdapter?.items?.add(PockmonBean(131, "嘎啦嘎啦", 87, "绿", "67", "47", "55", 287, 212))
         pockmonAdapter?.items?.add(PockmonBean(140, "杀手蝎", 110, "金", "130", "95", "123", 425, 300))
+        pockmonAdapter?.items?.add(PockmonBean(150, "幼绒", 25, 2,"紫", "25", "26", "27", 82, 88))
         pockmonAdapter?.items?.add(PockmonBean(200, "格林姆斯", 26, "紫", "26", "15", "23", 119, 89))
         pockmonAdapter?.items?.add(PockmonBean(201, "格林姆斯", 24, "蓝", "21", "18", "21", 69, 76))
         pockmonAdapter?.items?.add(PockmonBean(210, "尤尼库", 28, "蓝", "23", "16", "26", 96, 87))
@@ -82,6 +82,8 @@ class MainActivity : AppCompatActivity() {
         pockmonAdapter?.items?.add(PockmonBean(250, "裂空龙", 55, "紫", "58", "50", "51", 219, 166))
         pockmonAdapter?.items?.add(PockmonBean(260, "凤王", 27, 5,"紫", "40", "30", "33", 121, 119))
         pockmonAdapter?.items?.add(PockmonBean(261, "凤王", 34, 5,"紫", "46", "35", "38", 144, 138))
+        pockmonAdapter?.items?.add(PockmonBean(262, "凤王", 52, 5,"紫", "61", "48", "51", 204, 186))
+        pockmonAdapter?.items?.add(PockmonBean(263, "凤王", 66, 5,"紫", "73", "58", "61", 250, 223))
         pockmonAdapter?.items?.add(PockmonBean(300, "向日花怪", 30, "蓝", "25 + 3", "23 + 3", "23", 116, 96))
         pockmonAdapter?.items?.add(PockmonBean(310, "口呆花", 36, "绿", "27 + 6", "21 + 3", "27", 107, 99))
         pockmonAdapter?.items?.add(PockmonBean(320, "冥想花", 27, "变异绿", "29", "25", "27", 121, 90))
@@ -109,7 +111,8 @@ class MainActivity : AppCompatActivity() {
         pockmonAdapter?.items?.add(PockmonBean(365, "始祖大树", 94,5, "蓝", "80", "73", "53", 422, 287))
         pockmonAdapter?.items?.add(PockmonBean(366, "始祖大树", 100,5, "蓝", "84", "77", "56", 447, 303))
         pockmonAdapter?.items?.add(PockmonBean(370, "大菊花", 52, "紫", "44+6", "43", "41", 219, 145))
-        pockmonAdapter?.items?.add(PockmonBean(380, "根性草", 44, 2,"绿", "31", "23", "32", 117, 109))
+        pockmonAdapter?.items?.add(PockmonBean(380, "根性草", 44, 2,"绿", "31", "23", "32", 117, 109,MyConstants.SKILL_ADD_HP_STRENGTH))
+        pockmonAdapter?.items?.add(PockmonBean(390, "里朵叶", 19, 2,"绿", "31", "23", "32", 117, 109,MyConstants.SKILL_ADD_MP+MyConstants.SKILL_DOUBLE_EXP))
         pockmonAdapter?.items?.add(PockmonBean(400, "钢铁龙", 26, "紫", "39", "33", "21", 133, 82))
         pockmonAdapter?.items?.add(PockmonBean(401, "钢铁龙", 33, "变异绿", "45", "34", "26", 148, 96))
         pockmonAdapter?.items?.add(PockmonBean(402, "钢铁龙", 39, "变异绿", "50", "38", "29", 168, 106))
@@ -129,6 +132,7 @@ class MainActivity : AppCompatActivity() {
         pockmonAdapter?.items?.add(PockmonBean(451, "大钢蛇", 92, 3,"蓝", "57+8", "63", "59", 284, 192))
         pockmonAdapter?.items?.add(PockmonBean(460, "铁蚁", 59, 2,"蓝", "46", "39", "43", 182, 168))
         pockmonAdapter?.items?.add(PockmonBean(461, "铁蚁", 68, 2,"蓝", "51", "44", "47", 210, 190))
+        pockmonAdapter?.items?.add(PockmonBean(462, "铁蚁", 75, 2,"蓝", "56", "47", "51", 230, 205))
         pockmonAdapter?.items?.add(PockmonBean(500, "急冻鸟", 58, "变异绿", "59", "53", "60", 238, 168))
         pockmonAdapter?.items?.add(PockmonBean(501, "急冻鸟", 76, "变异绿", "72", "66", "74", 305, 210))
         pockmonAdapter?.items?.add(PockmonBean(509, "暴鲤龙", 7, "变异绿", "19", "15", "15", 56, 58))
@@ -146,11 +150,13 @@ class MainActivity : AppCompatActivity() {
         pockmonAdapter?.items?.add(PockmonBean(540, "暴鲤龙", 77, 3,"绿", "64", "46", "44", 238, 190))
         pockmonAdapter?.items?.add(PockmonBean(541, "暴鲤龙", 77, 3,"蓝", "71", "53", "50", 266, 210))
 //        pockmonAdapter?.items?.add(PockmonBean(550, "盖拉乌", 1, "变异金", "21+5", "13", "11", 47, 44))
+        pockmonAdapter?.items?.add(PockmonBean(551, "盖拉乌", 33,5, "绿", "45", "27", "27", 132, 109))
+        pockmonAdapter?.items?.add(PockmonBean(552, "盖拉乌", 54,5, "绿", "63", "37", "38", 194, 155))
         pockmonAdapter?.items?.add(PockmonBean(560, "巨炮龟", 94, "紫", "90+13", "77", "50+15", 374, 294))
         pockmonAdapter?.items?.add(PockmonBean(570, "吼鲸王", 66, "紫", "72", "62", "33", 294, 225))
         pockmonAdapter?.items?.add(PockmonBean(580, "吉洛洛", 21, 2,"绿", "20", "17", "19", 92, 68))
         pockmonAdapter?.items?.add(PockmonBean(590, "吉洛洛", 45, 2,"变异绿", "33", "38", "39", 158, 118))
-        pockmonAdapter?.items?.add(PockmonBean(591, "吉洛洛", 58, 2,"变异绿", "39", "46", "48", 195, 143))
+        pockmonAdapter?.items?.add(PockmonBean(591, "吉洛洛", 58, 2,"变异绿", "39", "46", "48", 195, 143,MyConstants.SKILL_ADD_MP+MyConstants.SKILL_DOUBLE_MONEY))
         pockmonAdapter?.items?.add(PockmonBean(600, "吼吼鲸", 55, 2,"绿", "39", "30", "37", 164, 127))
         pockmonAdapter?.items?.add(PockmonBean(610, "米露", 22, 2,"变异绿", "24", "24", "26+7", 78, 78))
         pockmonAdapter?.items?.add(PockmonBean(611, "加拉露", 22, 3,"变异绿", "28", "28", "26+7", 96, 78))
@@ -168,7 +174,7 @@ class MainActivity : AppCompatActivity() {
 //        val mList = ArrayList<Int>()
 //        val mList = pockmonAdapter?.items?.toArray()
 
-        val array: Array<String> = arrayOf("默认", "等级", "种类")
+        val array: Array<String> = arrayOf("默认", "等级（低到高）", "等级（高到低）","种类")
 
 //        for (i in pockmonAdapter?.items?.indices!!){
 //            mList.add(pockmonAdapter?.items?.get(i)?.level!!)
@@ -192,9 +198,7 @@ class MainActivity : AppCompatActivity() {
                 when {
                     position == 1 -> Collections.sort(pockmonAdapter?.items)
                     position == 2 -> {
-                        /**java中的中文排序逻辑*/
-                        val coll = Collator.getInstance(Locale.CHINESE)
-                        Collections.sort<PockmonBean>(pockmonAdapter?.items, coll)
+                        Collections.sort(pockmonAdapter?.items) { o1, o2 -> o2.level - o1.level }
                     }
 
                 }

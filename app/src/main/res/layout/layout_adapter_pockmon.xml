@@ -14,34 +14,44 @@
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp">
+        android:layout_height="160dp">
 
         <TextView
-            android:id="@+id/name"
+            android:id="@+id/id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:textSize="18sp"
+            android:text="@{bean.id+`.`}"
+            />
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/id"
+            app:layout_constraintStart_toEndOf="@id/id"
             android:textSize="18sp"
             android:text="@{bean.name}"
             />
         <TextView
             android:id="@+id/level"
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/adapter_width"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="@+id/name"
-            app:layout_constraintStart_toEndOf="@+id/name"
+            app:layout_constraintTop_toBottomOf="@+id/name"
+            app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
             android:textSize="18sp"
             android:text="@{`等级：`+bean.level}"
             />
         <TextView
             android:id="@+id/quality"
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/adapter_width"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="@+id/name"
+            app:layout_constraintTop_toTopOf="@+id/level"
             app:layout_constraintStart_toEndOf="@+id/level"
             android:layout_marginStart="10dp"
             android:textSize="18sp"
@@ -49,9 +59,9 @@
             />
         <TextView
             android:id="@+id/star"
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/adapter_width"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="@+id/name"
+            app:layout_constraintTop_toTopOf="@+id/level"
             app:layout_constraintStart_toEndOf="@+id/quality"
             android:layout_marginStart="10dp"
             android:textSize="18sp"
@@ -59,18 +69,17 @@
             />
         <TextView
             android:id="@+id/strength"
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/adapter_width"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/name"
-            app:layout_constraintStart_toStartOf="@+id/name"
+            app:layout_constraintTop_toBottomOf="@+id/level"
+            app:layout_constraintStart_toStartOf="@+id/level"
             android:layout_marginTop="5dp"
-            android:layout_marginStart="10dp"
             android:textSize="18sp"
             android:text="@{`力量：`+bean.strength}"
             />
         <TextView
             android:id="@+id/defense"
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/adapter_width"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="@+id/strength"
             app:layout_constraintStart_toEndOf="@+id/strength"
@@ -80,7 +89,7 @@
             />
         <TextView
             android:id="@+id/speed"
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/adapter_width"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="@+id/defense"
             app:layout_constraintStart_toEndOf="@+id/defense"
@@ -90,23 +99,34 @@
             />
         <TextView
             android:id="@+id/hp"
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/adapter_width"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@+id/strength"
             app:layout_constraintStart_toStartOf="@+id/strength"
-            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
             android:textSize="18sp"
-            android:text="@{`HP：`+bean.hp}"
+            android:text="@{`HP  ：`+bean.hp}"
             />
         <TextView
             android:id="@+id/mp"
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/adapter_width"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="@+id/hp"
             app:layout_constraintStart_toEndOf="@+id/hp"
             android:layout_marginStart="10dp"
             android:textSize="18sp"
-            android:text="@{`MP：`+bean.mp}"
+            android:text="@{`MP  ：`+bean.mp}"
+            />
+
+        <TextView
+            android:id="@+id/ps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/hp"
+            app:layout_constraintStart_toStartOf="@+id/hp"
+            android:layout_marginTop="5dp"
+            android:textSize="18sp"
+            android:text="@{`备注：`+bean.ps}"
             />
     </android.support.constraint.ConstraintLayout>
 </layout>

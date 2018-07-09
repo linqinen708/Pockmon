@@ -1,0 +1,7 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+
+    <dimen name="adapter_height">40dp</dimen>
+    <dimen name="adapter_width">105dp</dimen>
+    <dimen name="adapter_text_size">18sp</dimen>
+</resources>
