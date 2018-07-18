@@ -3,7 +3,7 @@ package com.linqinen708.pockmon.bean
 /**
  * Created by 林 on 2018/5/22.
  */
-class PockmonBean(var id: Int?, var name: String?, var level: Int = 0, var quality: String?,
+class PockmonBean(var id: Int?, var name: String?, var series: String?,var level: Int = 0, var stars: Int,var quality: String?,
                   var strength: String?, var defense: String?, var speed: String?
                   , var hp: Int = 0, var mp: Int = 0,var ps:String?
 ) : Comparable<PockmonBean> {
@@ -23,24 +23,21 @@ class PockmonBean(var id: Int?, var name: String?, var level: Int = 0, var quali
 //    }
 
 
-    var stars:Int = 0
-
-
 
     constructor(id: Int?, name: String?, level: Int = 0, stars: Int, quality: String?,
                 strength: String?, defense: String?, speed: String?
-                , hp: Int = 0, mp: Int = 0,ps:String) : this(id, name, level, quality, strength, defense, speed, hp, mp,ps){
+                , hp: Int = 0, mp: Int = 0,ps:String) : this(id, name,null, level, stars,quality, strength, defense, speed, hp, mp,ps){
         this.stars = stars
         this.ps = ps
     }
     constructor(id: Int?, name: String?, level: Int = 0, quality: String?,
                 strength: String?, defense: String?, speed: String?
-                , hp: Int = 0, mp: Int = 0) : this(id, name, level, quality, strength, defense, speed, hp, mp,null){
+                , hp: Int = 0, mp: Int = 0) : this(id, name, null,level, 0,quality, strength, defense, speed, hp, mp,null){
     }
 
     constructor(id: Int?, name: String?, level: Int = 0, stars: Int, quality: String?,
                 strength: String?, defense: String?, speed: String?
-                , hp: Int = 0, mp: Int = 0) : this(id, name, level, quality, strength, defense, speed, hp, mp,null){
+                , hp: Int = 0, mp: Int = 0) : this(id, name,null, 0,level, quality, strength, defense, speed, hp, mp,null){
         this.stars = stars
     }
 

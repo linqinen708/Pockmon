@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context=".offline.OfflineFragment">
+
+    <android.support.v7.widget.AppCompatSpinner
+        android:id="@+id/mSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="35dp">
+
+
+    </android.support.v7.widget.AppCompatSpinner>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/mRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        />
+
+</LinearLayout>

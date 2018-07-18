@@ -8,19 +8,26 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <android.support.v7.widget.AppCompatSpinner
-        android:id="@+id/mSpinner"
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/mViewPager"
         android:layout_width="match_parent"
-        android:layout_height="35dp">
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
 
+    </android.support.v4.view.ViewPager>
 
-    </android.support.v7.widget.AppCompatSpinner>
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/mRecyclerView"
+    <android.support.design.widget.TabLayout
+        android:id="@+id/mTabLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scrollbars="vertical"
-        />
+        android:layout_height="50dp"
+        android:background="@android:color/white"
+        app:tabIndicatorColor="@android:color/white"
+        app:tabSelectedTextColor="@color/orange_e05a17"
+        app:tabTextColor="@color/black_333333"
+        app:tabGravity="fill"
+        app:tabMode="fixed" />
 
 </LinearLayout>
