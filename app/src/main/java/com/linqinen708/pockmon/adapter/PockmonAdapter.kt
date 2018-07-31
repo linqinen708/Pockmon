@@ -43,6 +43,7 @@ class PockmonAdapter(context: Context?) : BasicBindingAdapter<PockmonBean, Layou
         binding.speed.setTextColor(context.getColor(colorId))
         binding.hp.setTextColor(context.getColor(colorId))
         binding.mp.setTextColor(context.getColor(colorId))
+        binding.gender.setTextColor(context.getColor(colorId))
         binding.ps.setTextColor(context.getColor(colorId))
     }
 

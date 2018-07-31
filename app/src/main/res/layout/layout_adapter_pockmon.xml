@@ -119,12 +119,21 @@
             />
 
         <TextView
-            android:id="@+id/ps"
-            android:layout_width="wrap_content"
+            android:id="@+id/gender"
+            android:layout_width="@dimen/adapter_width"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@+id/hp"
             app:layout_constraintStart_toStartOf="@+id/hp"
             android:layout_marginTop="5dp"
+            android:textSize="18sp"
+            android:text="@{`性别：`+bean.gender}"
+            />
+        <TextView
+            android:id="@+id/ps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/gender"
+            app:layout_constraintStart_toEndOf="@+id/gender"
             android:textSize="18sp"
             android:text="@{`备注：`+bean.ps}"
             />
