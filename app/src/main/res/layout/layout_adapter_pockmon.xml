@@ -126,7 +126,7 @@
             app:layout_constraintStart_toStartOf="@+id/hp"
             android:layout_marginTop="5dp"
             android:textSize="18sp"
-            android:text="@{`性别：`+bean.gender}"
+            android:text="@{`性别：`+bean.getGenderInfo}"
             />
         <TextView
             android:id="@+id/ps"

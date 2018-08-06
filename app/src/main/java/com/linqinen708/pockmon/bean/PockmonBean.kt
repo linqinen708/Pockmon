@@ -55,13 +55,13 @@ class PockmonBean(var id: Int?, var name: String?, var series: String?, var leve
             this(id, name, null, stars, level, quality, strength, defense, speed, hp, mp, null)
 
 
-    public fun getGenderInfo() {
+    public fun getGenderInfo():String =
         when (gender) {
             0 -> "母"
             1 -> "公"
             else -> "未知"
         }
-    }
+
 
 
 }

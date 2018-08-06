@@ -1,4 +1,4 @@
-package com.linqinen708.pockmon.offline
+package com.linqinen708.pockmon.fragment.offline
 
 import android.content.Context
 import android.net.Uri

@@ -1,4 +1,4 @@
-package com.linqinen708.pockmon.externalbiography
+package com.linqinen708.pockmon.fragment.externalbiography
 
 import android.content.Context
 import android.net.Uri
@@ -59,7 +59,6 @@ class ExternalBiographyFragment : BaseFragment() {
         initRecyclerView()
         initData()
         initSpinner()
-
 
     }
 
@@ -131,15 +130,22 @@ class ExternalBiographyFragment : BaseFragment() {
 
     fun initData() {
         /**风系*/
-        pockmonAdapter?.items?.add(PockmonBean(10001, "绵绵", "风系",15, 1, "蓝", "12", "8", "9", 108, 68,"血量特别多"))
-        pockmonAdapter?.items?.add(PockmonBean(10010, "阿科泰克", "风系",45, 3, "紫", "63+9", "43", "67",
-                164, 149,"快速连击"))
+        pockmonAdapter?.items?.add(PockmonBean(10001, "绵绵", "风系",15, 1, "蓝",
+                "12", "8", "9", 108, 68,"血量特别多"))
+        pockmonAdapter?.items?.add(PockmonBean(10010, "阿科泰克", "风系",45, 3, "紫",
+                "63+9", "43", "67", 164, 149,"快速连击"))
         pockmonAdapter?.items?.add(PockmonBean(10011, "伊莱艾克", "风系",45, 5, "紫",
                 "74+11", "56", "102", 164, 166,"大风，快速连击"))
         pockmonAdapter?.items?.add(PockmonBean(10011, "伊莱艾克", "风系",58, 5, "紫",
                 "94+14", "71", "129", 209, 197,"大风，快速连击"))
         pockmonAdapter?.items?.add(PockmonBean(10020, "烈米亚", "风系",1, 3, "绿",
                 "1", "1", "1", 23, 71,"大风，快速连击"))
+        pockmonAdapter?.items?.add(PockmonBean(10030, "浮游龙", "风系",61, 4, "绿",
+                "61", "54", "62", 280, 230,"大风"))
+        pockmonAdapter?.items?.add(PockmonBean(10031, "浮游龙", "风系",74, 4, "绿",
+                "78", "70", "69", 491, 235,"大风"))
+        pockmonAdapter?.items?.add(PockmonBean(10032, "浮游龙", "风系",74, 4, "蓝",
+                "87", "79", "76", 534, 258,"大风"))
         /**暗系*/
         pockmonAdapter?.items?.add(PockmonBean(11001, "暗灵兔", "暗系",29, 1, "绿",
                 "20", "18", "24", 70, 72,""))
@@ -149,22 +155,30 @@ class ExternalBiographyFragment : BaseFragment() {
                 "53", "48", "35", 229, 143,""))
         pockmonAdapter?.items?.add(PockmonBean(11020, "亚密雷欧", "暗系",51, 4, "蓝",
                 "53+7", "59", "58", 263, 141,""))
+        pockmonAdapter?.items?.add(PockmonBean(11020, "亚密雷欧", "暗系",67, 4, "蓝",
+                "69+10", "78", "81", 340, 196,""))
         pockmonAdapter?.items?.add(PockmonBean(11020, "亚密雷欧", "暗系",62, 4, "蓝",
                 "63+9", "71", "75", 308, 183,""))
         pockmonAdapter?.items?.add(PockmonBean(11030, "暗影蝎", "暗系",56, 3, "蓝",
                 "88", "56", "55+16", 263, 141,""))
         pockmonAdapter?.items?.add(PockmonBean(11040, "索罗亚库", "暗系",31, 3, "蓝",
-                "35", "34", "43", 92, 174,"忍耐"))
+                "35", "34", "43", 92, 174,""))
+        pockmonAdapter?.items?.add(PockmonBean(11041, "索罗亚库", "暗系",57, 3, "蓝",
+                "60", "59", "72", 159, 249,""))
         pockmonAdapter?.items?.add(PockmonBean(11050, "杰特", "暗系",5, 1, "绿",
                 "35", "34", "43", 28, 75,1,"积蓄"))
         pockmonAdapter?.items?.add(PockmonBean(11060, "杰特", "暗系",5, 1, "绿",
                 "35", "34", "43", 28, 71,0,"忍耐"))
 
         /**火系*/
-        pockmonAdapter?.items?.add(PockmonBean(12001, "宝宝龙", "火系",17, 1, "蓝", "17", "14", "11+3", 56, 63,"积蓄，撒气"))
-        pockmonAdapter?.items?.add(PockmonBean(12002, "宝宝龙", "火系",30, 1, "蓝", "27", "22", "16+4", 79, 73,"积蓄，撒气"))
-        pockmonAdapter?.items?.add(PockmonBean(12003, "火蜥龙", "火系",19, 2, "蓝", "25", "19", "14+4", 78, 73,""))
-        pockmonAdapter?.items?.add(PockmonBean(12004, "火蜥龙", "火系",30, 2, "蓝", "36", "27", "19+5", 108, 86,""))
+        pockmonAdapter?.items?.add(PockmonBean(12001, "宝宝龙", "火系",17, 1, "蓝",
+                "17", "14", "11+3", 56, 63,"积蓄，撒气"))
+        pockmonAdapter?.items?.add(PockmonBean(12002, "宝宝龙", "火系",30, 1, "蓝",
+                "27", "22", "16+4", 79, 73,"积蓄，撒气"))
+        pockmonAdapter?.items?.add(PockmonBean(12003, "火蜥龙", "火系",19, 2, "蓝",
+                "25", "19", "14+4", 78, 73,""))
+        pockmonAdapter?.items?.add(PockmonBean(12004, "火蜥龙", "火系",30, 2, "蓝",
+                "36", "27", "19+5", 108, 86,""))
 
         /**草系*/
         pockmonAdapter?.items?.add(PockmonBean(13001, "妙蛙种子", "植物系",13, 1, "紫",
@@ -181,18 +195,20 @@ class ExternalBiographyFragment : BaseFragment() {
                 "10", "10", "10", 10, 8,"积蓄"))
 
         pockmonAdapter?.items?.add(PockmonBean(13920, "莲草种子", "植物系",15, 1, "绿",
-                "10", "12", "10", 51, 62,1,"积蓄，寄生魔芽"))
+                "10", "12", "10", 51, 62,1,"积蓄，寄生魔芽，毒种子"))
         pockmonAdapter?.items?.add(PockmonBean(13923, "莲草种子", "植物系",31, 1, "绿",
-                "16", "19", "20", 66, 97,1,"积蓄，寄生魔芽"))
+                "16", "19", "20", 66, 97,1,"积蓄，寄生魔芽，毒种子"))
         pockmonAdapter?.items?.add(PockmonBean(13924, "根性草", "植物系",31, 1, "绿",
                 "30", "28", "20", 111, 120,1,"撒气，决胜攻击"))
-        pockmonAdapter?.items?.add(PockmonBean(13924, "冥想花", "植物系",31, 1, "绿",
+        pockmonAdapter?.items?.add(PockmonBean(13924, "冥想花", "植物系",31, 3, "绿",
                 "38", "30", "26", 133, 116,1,"晴天"))
+        pockmonAdapter?.items?.add(PockmonBean(13925, "冥想花", "植物系",60, 3, "绿",
+                "68", "54", "41", 239, 159,1,"晴天"))
 
         pockmonAdapter?.items?.add(PockmonBean(13921, "莲草种子", "植物系",17, 1, "紫",
-                "11", "13", "13", 51, 65,"积蓄，寄生魔芽"))
+                "11", "13", "13", 51, 65,"积蓄，寄生魔芽，毒种子"))
         pockmonAdapter?.items?.add(PockmonBean(13922, "莲草种子", "植物系",31, 1, "紫",
-                "17", "19", "19", 68, 79,"积蓄，寄生魔芽"))
+                "17", "19", "19", 68, 79,"积蓄，寄生魔芽，毒种子"))
         pockmonAdapter?.items?.add(PockmonBean(13925, "根性草", "植物系",31, 2, "紫",
                 "30+1", "23+1", "19", 130, 104,""))
         pockmonAdapter?.items?.add(PockmonBean(13930, "冥想花", "植物系",31, 3, "紫",
@@ -205,24 +221,32 @@ class ExternalBiographyFragment : BaseFragment() {
         pockmonAdapter?.items?.add(PockmonBean(13929, "冥想花", "植物系",33, 3, "蓝",
                 "1", "1", "1", 171, 1,""))
 
-        pockmonAdapter?.items?.add(PockmonBean(13030, "幼里朵", "植物系",19, 1, "紫（稀有）", "14", "15", "20+6", 71, 81,"毒菱"))
+        pockmonAdapter?.items?.add(PockmonBean(13030, "幼里朵", "植物系",19, 1, "紫（稀有）",
+                "14", "15", "20+6", 71, 81,"毒菱"))
         pockmonAdapter?.items?.add(PockmonBean(13031, "里朵叶", "植物系",19, 2, "紫（稀有）",
                 "20", "17", "21+6", 79, 89,"毒菱，再生，寄生魔芽，晴天，神秘草"))
         pockmonAdapter?.items?.add(PockmonBean(13031, "里朵叶", "植物系",49, 2, "紫（稀有）",
                 "48", "40", "50+15", 165, 165,"毒菱，再生，寄生魔芽，晴天，神秘草"))
-        pockmonAdapter?.items?.add(PockmonBean(13040, "莲草鼬", "植物系",1, 1, "蓝", "1", "1", "1", 22, 51,""))
-        pockmonAdapter?.items?.add(PockmonBean(13040, "叶尾鼬", "植物系",29, 2, "绿", "22", "25", "25+7",
+        pockmonAdapter?.items?.add(PockmonBean(13040, "莲草鼬", "植物系",1, 1, "蓝",
+                "1", "1", "1", 22, 51,""))
+        pockmonAdapter?.items?.add(PockmonBean(13040, "叶尾鼬", "植物系",29, 2, "绿",
+                "22", "25", "25+7",
                 137, 111,"撒气"))
-        pockmonAdapter?.items?.add(PockmonBean(13040, "叶镰鼬", "植物系",29, 3, "绿", "30", "26", "32+9",
+        pockmonAdapter?.items?.add(PockmonBean(13040, "叶镰鼬", "植物系",29, 3, "绿",
+                "30", "26", "32+9",
                 146, 110,"撒气"))
-        pockmonAdapter?.items?.add(PockmonBean(13050, "闻香果", "植物系",1, 1, "绿", "1", "1", "1",
+        pockmonAdapter?.items?.add(PockmonBean(13050, "闻香果", "植物系",1, 1, "绿",
+                "1", "1", "1",
                 1, 1,""))
-        pockmonAdapter?.items?.add(PockmonBean(13051, "萝曼果", "植物系",34, 1, "蓝", "1", "1", "1",
+        pockmonAdapter?.items?.add(PockmonBean(13051, "萝曼果", "植物系",34, 1, "蓝",
+                "1", "1", "1",
                 156, 1,""))
 
         /**兽系*/
-        pockmonAdapter?.items?.add(PockmonBean(14001, "皮皮芒奇", "兽系",15, 1, "绿", "11", "12", "11", 72, 67,""))
-        pockmonAdapter?.items?.add(PockmonBean(14010, "阿科泰克", "兽系",37, 3, "紫", "53+7", "36", "52", 149, 114,""))
+        pockmonAdapter?.items?.add(PockmonBean(14001, "皮皮芒奇", "兽系",15, 1, "绿",
+                "11", "12", "11", 72, 67,""))
+        pockmonAdapter?.items?.add(PockmonBean(14010, "阿科泰克", "兽系",37, 3, "紫",
+                "53+7", "36", "52", 149, 114,""))
         pockmonAdapter?.items?.add(PockmonBean(14020, "德德尼", "兽系",26, 1, "紫",
                 "26", "20+3", "23+6", 93, 83,""))
         pockmonAdapter?.items?.add(PockmonBean(14030, "银希奇", "兽系",26, 2, "蓝",
@@ -231,17 +255,26 @@ class ExternalBiographyFragment : BaseFragment() {
                 "1", "1", "1", 24, 71,-1,"炎热，决胜攻击"))
 
         /**雷系*/
-        pockmonAdapter?.items?.add(PockmonBean(15001, "幼雷犬", "雷系",19, 1, "蓝", "17", "11", "17", 81, 72,"成长"))
-        pockmonAdapter?.items?.add(PockmonBean(15002, "幼雷犬", "雷系",21, 1, "蓝", "18", "12", "18", 87, 74,"成长"))
-        pockmonAdapter?.items?.add(PockmonBean(15003, "幻雷狼", "雷系",21, 3, "蓝", "22", "16", "25", 105, 77,"忍耐，成长"))
-        pockmonAdapter?.items?.add(PockmonBean(15004, "幻雷狼", "雷系",40, 3, "蓝", "39", "27", "43", 165, 103,"忍耐，成长"))
-        pockmonAdapter?.items?.add(PockmonBean(15010, "凯希", "雷系",26, 3, "紫", "30", "27+4", "40+12", 97, 102,""))
+        pockmonAdapter?.items?.add(PockmonBean(15001, "幼雷犬", "雷系",19, 1, "蓝",
+                "17", "11", "17", 81, 72,"成长"))
+        pockmonAdapter?.items?.add(PockmonBean(15002, "幼雷犬", "雷系",21, 1, "蓝",
+                "18", "12", "18", 87, 74,"成长"))
+        pockmonAdapter?.items?.add(PockmonBean(15003, "幻雷狼", "雷系",21, 3, "蓝",
+                "22", "16", "25", 105, 77,"忍耐，成长"))
+        pockmonAdapter?.items?.add(PockmonBean(15004, "幻雷狼", "雷系",40, 3, "蓝",
+                "39", "27", "43", 165, 103,"忍耐，成长"))
+        pockmonAdapter?.items?.add(PockmonBean(15010, "凯希", "雷系",26, 3, "紫",
+                "30", "27+4", "40+12", 97, 102,""))
 
         /**水系*/
-        pockmonAdapter?.items?.add(PockmonBean(16001, "波企鹅", "水系",15, 1, "蓝", "15", "15", "13", 67, 75,"成长"))
-        pockmonAdapter?.items?.add(PockmonBean(16002, "斗企鹅", "水系",15, 3, "蓝", "19", "18", "14", 71, 83,"忍耐，成长"))
-        pockmonAdapter?.items?.add(PockmonBean(16003, "斗企鹅", "水系",22, 3, "蓝", "26", "24", "19", 91, 98,"忍耐，成长"))
-        pockmonAdapter?.items?.add(PockmonBean(16004, "斗企鹅", "水系",44, 3, "蓝", "48", "43", "33", 153, 149,""))
+        pockmonAdapter?.items?.add(PockmonBean(16001, "波企鹅", "水系",15, 1, "蓝",
+                "15", "15", "13", 67, 75,"成长"))
+        pockmonAdapter?.items?.add(PockmonBean(16002, "斗企鹅", "水系",15, 3, "蓝",
+                "19", "18", "14", 71, 83,"忍耐，成长"))
+        pockmonAdapter?.items?.add(PockmonBean(16003, "斗企鹅", "水系",22, 3, "蓝",
+                "26", "24", "19", 91, 98,"忍耐，成长"))
+        pockmonAdapter?.items?.add(PockmonBean(16004, "斗企鹅", "水系",44, 3, "蓝",
+                "48", "43", "33", 153, 149,""))
         pockmonAdapter?.items?.add(PockmonBean(16005, "首领企鹅", "水系",44, 4, "蓝",
                 "50", "47", "38", 194, 165,""))
         pockmonAdapter?.items?.add(PockmonBean(16006, "首领企鹅", "水系",61, 4, "蓝",
@@ -250,6 +283,12 @@ class ExternalBiographyFragment : BaseFragment() {
         /**岩系*/
         pockmonAdapter?.items?.add(PockmonBean(17000, "岩米亚", "水系",1, 3, "绿",
                 "1", "1", "1", 23, 71,"沙暴，石化反击，撒气"))
+
+        /**飞行系*/
+        pockmonAdapter?.items?.add(PockmonBean(18000, "格里姆斯", "飞行系",26, 2, "绿",
+                "24", "23", "31", 69, 95,"羽栖，暗影突袭"))
+        pockmonAdapter?.items?.add(PockmonBean(18001, "格里芬", "飞行系",26, 3, "绿",
+                "33", "26", "33", 101, 102,"羽栖，暗影突袭"))
 
     }
 
@@ -272,12 +311,13 @@ class ExternalBiographyFragment : BaseFragment() {
 
                 LogT.i("position:" + position)
                 when {
+                    position == 0 -> Collections.sort(pockmonAdapter?.items) { o1, o2 -> o2.level - o1.level }
                     position == 1 -> Collections.sort(pockmonAdapter?.items)
                     position == 2 -> {
                         Collections.sort(pockmonAdapter?.items) { o1, o2 -> o2.level - o1.level }
                     }
-
                 }
+                pockmonAdapter?.notifyDataSetChanged()
             }
 
             override fun onNothingSelected(adapterView: AdapterView<*>) {
