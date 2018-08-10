@@ -4,4 +4,5 @@
     <dimen name="adapter_height">40dp</dimen>
     <dimen name="adapter_width">108dp</dimen>
     <dimen name="adapter_text_size">18sp</dimen>
+
 </resources>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <data>
+        <variable
+            name="bean"
+            type="com.linqinen708.pockmon.fragment.fuse.bean.FuseBean"/>
+
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/id"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="5dp"
+            android:textSize="18sp"
+            />
+
+        <TextView
+            android:id="@+id/name01"
+            android:layout_width="95dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/id"
+            app:layout_constraintStart_toEndOf="@id/id"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:text="@{bean.name01+`(`+bean.stars01+`)`}"
+            android:textColor="@color/blue_5AA2ED"
+            />
+        <!--<TextView-->
+            <!--android:id="@+id/stars01"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--app:layout_constraintTop_toTopOf="@id/id"-->
+            <!--app:layout_constraintStart_toEndOf="@id/name01"-->
+            <!--android:layout_marginStart="1dp"-->
+            <!--android:textSize="18sp"-->
+            <!--android:text="@{`(`+bean.stars01+`)`}"-->
+            <!--android:textColor="@color/blue_5AA2ED"-->
+            <!--/>-->
+        <TextView
+            android:id="@+id/name02"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/id"
+            app:layout_constraintStart_toEndOf="@id/name01"
+            android:layout_marginStart="3dp"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:text="@{`+   `+bean.name02+`(`+bean.stars02+`)`}"
+            android:textColor="@color/yellow_f6b42b"
+            />
+        <!--<TextView-->
+            <!--android:id="@+id/stars02"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--app:layout_constraintTop_toTopOf="@id/id"-->
+            <!--app:layout_constraintStart_toEndOf="@id/name02"-->
+            <!--android:layout_marginStart="1dp"-->
+            <!--android:textSize="18sp"-->
+            <!--android:text="@{`(`+bean.stars02+`)`}"-->
+            <!--android:textColor="@color/yellow_f6b42b"-->
+            <!--/>-->
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/id"
+            app:layout_constraintStart_toEndOf="@id/name02"
+            android:layout_marginStart="3dp"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:text="@{`=   `+bean.result+`(`+bean.stars+`)`}"
+            android:textColor="@color/green_00cc66"
+            />
+        <!--<TextView-->
+            <!--android:id="@+id/stars"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--app:layout_constraintTop_toTopOf="@id/result"-->
+            <!--app:layout_constraintStart_toEndOf="@id/result"-->
+            <!--android:layout_marginStart="1dp"-->
+            <!--android:textSize="18sp"-->
+            <!--android:text="@{`(`+bean.stars+`)`}"-->
+            <!--android:textColor="@color/green_00cc66"-->
+            <!--/>-->
+
+        <TextView
+            android:id="@+id/badge"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/id"
+            app:layout_constraintStart_toEndOf="@id/id"
+            android:layout_marginStart="15dp"
+            android:textSize="18sp"
+            android:text="@{`徽章：`+bean.badge}"
+            android:textColor="@color/purple_cc7903db"
+            />
+        <TextView
+            android:id="@+id/secretDrug"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/badge"
+            app:layout_constraintStart_toEndOf="@id/badge"
+            android:layout_marginStart="5dp"
+            android:textSize="18sp"
+            android:text="@{`秘传之药：`+bean.secretDrug}"
+            android:textColor="@color/pink_ff6666"
+            />
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

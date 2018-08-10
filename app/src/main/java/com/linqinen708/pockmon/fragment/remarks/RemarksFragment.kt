@@ -8,6 +8,7 @@ import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.linqinen.library.utils.LogT
 import com.linqinen708.pockmon.R
 import com.linqinen708.pockmon.fragment.remarks.adapter.RemarksAdapter
 import com.linqinen708.pockmon.fragment.remarks.bean.RemarkBean
@@ -50,6 +51,7 @@ class RemarksFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        LogT.i("备注界面")
         initRecyclerView()
         initData()
     }
@@ -113,26 +115,28 @@ class RemarksFragment : Fragment() {
 
     private var mAdapter: RemarksAdapter? = null
 
-    fun initRecyclerView() {
+    private fun initRecyclerView() {
         mRecyclerView.layoutManager = LinearLayoutManager(context)
         mAdapter = RemarksAdapter(context)
         mRecyclerView.adapter = mAdapter
 
     }
 
-    fun initData() {
-        mAdapter?.items?.add(RemarkBean(1,"合体宠物品质越高，合体后产生的宠物品质高低几率也会越高"))
-        mAdapter?.items?.add(RemarkBean(2,"植物->水->火->植物、暗，飞行->风->土->雷->飞行，金属->冰->龙->光、暗->光、暗，野兽->野兽，暗->野兽、金属->->->->->"))
-        mAdapter?.items?.add(RemarkBean(3,"宠物稀有度：白-绿-蓝-紫-橙-红"))
-        mAdapter?.items?.add(RemarkBean(4,"两只不同性别的宠物（雄、雌）才可以进行繁育后代"))
-        mAdapter?.items?.add(RemarkBean(5,"同一种宠物不同性别，天生属性会有一定差异，部分种类宠物只有单性别（即雄性或雌性）才可以进化"))
-        mAdapter?.items?.add(RemarkBean(6,"次世代宠物一定几率可以获得强力的繁育天赋"))
-        mAdapter?.items?.add(RemarkBean(7,"进入秘境需要使用不同的秘境挑战券，战胜秘境中的首领，有几率可以获得稀有道具奖励"))
-        mAdapter?.items?.add(RemarkBean(8,"魅惑状态：该状态下宠物提升被捕获几率（野生宠物），不可使用道具，减少逃跑几率，降低自身力量"))
-        mAdapter?.items?.add(RemarkBean(9,"石化状态：该状态下，宠物不能攻击，不能替换，受到伤害降低，不能逃跑"))
-        mAdapter?.items?.add(RemarkBean(10,"混乱状态：该状态下，因为思维混乱一定几率对自身造成一次普通攻击伤害"))
-//        mAdapter?.items?.add("")
-//        mAdapter?.items?.add("")
+    private fun initData() {
+        mAdapter?.items?.add(RemarkBean("合体宠物品质越高，合体后产生的宠物品质高低几率也会越高"))
+        mAdapter?.items?.add(RemarkBean("植物->水->火->植物、暗，飞行->风->土->雷->飞行，金属->冰->龙->光、暗->光、暗，野兽->野兽，暗->野兽、金属->->->->->"))
+        mAdapter?.items?.add(RemarkBean("宠物稀有度：白-绿-蓝-紫-橙-红"))
+        mAdapter?.items?.add(RemarkBean("两只不同性别的宠物（雄、雌）才可以进行繁育后代"))
+        mAdapter?.items?.add(RemarkBean("同一种宠物不同性别，天生属性会有一定差异，部分种类宠物只有单性别（即雄性或雌性）才可以进化"))
+        mAdapter?.items?.add(RemarkBean("次世代宠物一定几率可以获得强力的繁育天赋"))
+        mAdapter?.items?.add(RemarkBean("进入秘境需要使用不同的秘境挑战券，战胜秘境中的首领，有几率可以获得稀有道具奖励"))
+        mAdapter?.items?.add(RemarkBean("有boss的地图：碎石山洞3、"))
+//        mAdapter?.items?.add(RemarkBean(""))
+        mAdapter?.items?.add(RemarkBean("宠物品质可以通过融合、繁育、合体等方式后天培养提升至最高阶段红色"))
+        mAdapter?.items?.add(RemarkBean("魅惑状态：该状态下宠物提升被捕获几率（野生宠物），不可使用道具，减少逃跑几率，降低自身力量"))
+        mAdapter?.items?.add(RemarkBean("石化状态：该状态下，宠物不能攻击，不能替换，受到伤害降低，不能逃跑"))
+        mAdapter?.items?.add(RemarkBean("混乱状态：该状态下，因为思维混乱一定几率对自身造成一次普通攻击伤害"))
+        mAdapter?.items?.add(RemarkBean("睡眠状态：该状态下宠物提升被捕获几率，不能攻击，不能逃跑，每回合回复最大生命值（目测5%），降低自身防御、速度"))
 
     }
 

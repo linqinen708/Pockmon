@@ -1,4 +1,4 @@
-package com.linqinen708.pockmon.fragment.remarks.adapter
+package com.linqinen708.pockmon.fragment.fuse.adapter
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -6,18 +6,18 @@ import android.support.v7.widget.RecyclerView
 import android.widget.TextView
 import com.linqinen.library.adapter.BasicBindingAdapter
 import com.linqinen708.pockmon.R
-import com.linqinen708.pockmon.databinding.LayoutAdapterRemarksBinding
-import com.linqinen708.pockmon.fragment.remarks.bean.RemarkBean
+import com.linqinen708.pockmon.databinding.LayoutAdapterFuseBinding
+import com.linqinen708.pockmon.fragment.fuse.bean.FuseBean
 
 /**
  * Created by Ian on 2018/6/18.
  */
-class RemarksAdapter(context: Context?) : BasicBindingAdapter<RemarkBean, LayoutAdapterRemarksBinding>(context) {
+class FuseAdapter(context: Context?) : BasicBindingAdapter<FuseBean, LayoutAdapterFuseBinding>(context) {
 
 
 
     override fun getLayoutResId(viewType: Int): Int {
-        return R.layout.layout_adapter_remarks
+        return R.layout.layout_adapter_fuse
     }
 
     @SuppressLint("SetTextI18n")
@@ -31,10 +31,12 @@ class RemarksAdapter(context: Context?) : BasicBindingAdapter<RemarkBean, Layout
         }else{
             holder.itemView.setBackgroundColor(context.getColor(R.color.white_ffffff))
         }
+
     }
 
-    override fun onBindItem(binding: LayoutAdapterRemarksBinding?, bean: RemarkBean?) {
+    override fun onBindItem(binding: LayoutAdapterFuseBinding?, bean: FuseBean?) {
         binding?.bean = bean
+
     }
 
 }
