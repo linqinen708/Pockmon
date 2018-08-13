@@ -43,6 +43,16 @@ class PockmonBean(var id: Int?, var name: String?, var series: String?, var leve
                 , hp: Int = 0, mp: Int = 0, ps: String) :
             this(id, name, null, level, stars, quality, strength, defense, speed, hp, mp, ps)
 
+    var generation:Int? = 1
+
+    /**代*/
+    constructor(id: Int?, name: String?, generation:Int,series: String?,level: Int = 0, stars: Int, quality: String?,
+                strength: String?, defense: String?, speed: String?
+                , hp: Int = 0, mp: Int = 0, gender: Int?,ps: String) :
+            this(id, name, null, level, stars, quality, strength, defense, speed, hp, mp, ps){
+        this.generation = generation
+    }
+
 
     constructor(id: Int?, name: String?, level: Int = 0, quality: String?, strength: String?, defense: String?, speed: String?
                 , hp: Int = 0, mp: Int = 0)

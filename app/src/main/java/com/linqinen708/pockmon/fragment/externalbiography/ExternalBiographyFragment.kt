@@ -250,10 +250,12 @@ class ExternalBiographyFragment : BaseFragment() {
                 "11", "13", "13", 51, 65, "积蓄，寄生魔芽，毒种子"))
         pockmonAdapter?.items?.add(PockmonBean(13922, "莲草种子", "植物系", 31, 1, "紫",
                 "17", "19", "19", 68, 79, "积蓄，寄生魔芽，毒种子"))
-        pockmonAdapter?.items?.add(PockmonBean(13925, "根性草", "植物系", 31, 2, "紫",
-                "30+1", "23+1", "19", 130, 104, "撒气，决胜攻击"))
-        pockmonAdapter?.items?.add(PockmonBean(13930, "冥想花", "植物系", 31, 3, "紫",
+        pockmonAdapter?.items?.add(PockmonBean(13925, "根性草", 1,"植物系", 31, 2, "紫",
+                "30+1", "23+1", "19", 130, 104, 0,"撒气，决胜攻击"))
+        pockmonAdapter?.items?.add(PockmonBean(13930, "冥想花", 1,"植物系", 31, 3, "紫",
                 "36+1", "25+1", "23+1", 156, 104, 0, "冥想"))
+        pockmonAdapter?.items?.add(PockmonBean(13930, "冥想花", 1,"植物系", 65, 3, "紫",
+                "71+3", "47+2", "44+2", 292, 167, 0, "冥想"))
 
         pockmonAdapter?.items?.add(PockmonBean(13926, "冥想花", "植物系", 20, 3, "蓝",
                 "1", "1", "1", 121, 1, ""))
@@ -261,6 +263,15 @@ class ExternalBiographyFragment : BaseFragment() {
                 "1", "1", "1", 135, 1, ""))
         pockmonAdapter?.items?.add(PockmonBean(13929, "冥想花", "植物系", 33, 3, "蓝",
                 "1", "1", "1", 171, 1, ""))
+
+        pockmonAdapter?.items?.add(PockmonBean(13800, "莲草种子", 2,"植物系", 26, 1, "绿",
+                "21", "18", "15", 108, 144, 1,"毒菱，寄生种子，冥想，毒种子，积蓄"))
+        pockmonAdapter?.items?.add(PockmonBean(13800, "莲草种子", 2,"植物系", 50, 1, "绿",
+                "31", "26", "24", 137, 180, 1,""))
+        pockmonAdapter?.items?.add(PockmonBean(13800, "根性草", 2,"植物系", 50, 2, "绿",
+                "57", "36", "24", 209, 244, 1,"撒气"))
+        pockmonAdapter?.items?.add(PockmonBean(13800, "冥想花", 2,"植物系", 50, 3, "绿",
+                "70", "39", "35", 245, 234, 1,"晴天"))
 
         pockmonAdapter?.items?.add(PockmonBean(13030, "幼里朵", "植物系", 19, 1, "紫（稀有）",
                 "14", "15", "20+6", 71, 81, "毒菱"))
@@ -327,8 +338,18 @@ class ExternalBiographyFragment : BaseFragment() {
                 "50", "47", "38", 194, 165, ""))
         pockmonAdapter?.items?.add(PockmonBean(16006, "首领企鹅", "水系", 61, 4, "蓝",
                 "68", "63", "57", 251, 234, "液态圈，浪潮，海啸，积蓄"))
-        pockmonAdapter?.items?.add(PockmonBean(17000, "珀西尼", "水系", 9, 1, "蓝",
+        pockmonAdapter?.items?.add(PockmonBean(16010, "珀西尼", "水系", 9, 1, "蓝",
                 "1", "1", "1", 59, 56, "治愈水"))
+        pockmonAdapter?.items?.add(PockmonBean(16011, "珀尼德拉", 2,"水系", 25, 3, "蓝",
+                "41", "31", "17", 169, 97, 1,"雷雨，海啸，零度雪球"))
+        pockmonAdapter?.items?.add(PockmonBean(16020, "珀尼德拉", 1,"水系", 37, 3, "紫（稀有）",
+                "55", "41", "31", 233, 126, 1,"治愈水"))
+        pockmonAdapter?.items?.add(PockmonBean(16030, "加拉露", 1,"水系", 23, 2, "绿",
+                "22", "25", "17", 104, 81, 1,"治愈水，成长，撒气，液态圈"))
+        pockmonAdapter?.items?.add(PockmonBean(16031, "加拉露", 1,"水系", 3, 2, "绿",
+                "28", "32", "22", 127, 95, 1,"治愈水，成长，撒气，液态圈"))
+        pockmonAdapter?.items?.add(PockmonBean(16031, "露达鲁", 1,"水系", 33, 3, "绿",
+                "33", "41", "26", 140, 106, 1,"治愈水，成长，撒气，液态圈"))
     }
 
     /**土系*/

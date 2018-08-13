@@ -8,18 +8,19 @@
     <data>
         <variable
             name="bean"
-            type="com.linqinen708.pockmon.fragment.fuse.bean.FuseBean"/>
+            type="com.linqinen708.pockmon.fragment.breed.BreedBean"/>
 
     </data>
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/adapter_fuse_height">
+        android:layout_height="@dimen/adapter_height"
+        >
 
         <TextView
             android:id="@+id/id"
             android:layout_width="25dp"
-            android:layout_height="@dimen/adapter_fuse_text_height"
+            android:layout_height="@dimen/adapter_text_height"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             android:gravity="center_vertical"
@@ -30,61 +31,60 @@
 
         <TextView
             android:id="@+id/name01"
-            android:layout_width="95dp"
-            android:layout_height="@dimen/adapter_fuse_text_height"
+            android:layout_width="160dp"
+            android:layout_height="@dimen/adapter_text_height"
             app:layout_constraintTop_toTopOf="@id/id"
             app:layout_constraintStart_toEndOf="@id/id"
             android:gravity="center"
             android:textSize="18sp"
-            android:text="@{bean.name01+`(`+bean.stars01+`)`}"
+            android:text="@{bean.name01+`(`+bean.stars01+`)`+`(`+bean.showGender(bean.gender01)+`)`}"
             android:textColor="@color/blue_5AA2ED"
             />
         <TextView
             android:id="@+id/name02"
-            android:layout_width="120dp"
-            android:layout_height="@dimen/adapter_fuse_text_height"
+            android:layout_width="170dp"
+            android:layout_height="@dimen/adapter_text_height"
             app:layout_constraintTop_toTopOf="@id/id"
             app:layout_constraintStart_toEndOf="@id/name01"
-            android:layout_marginStart="3dp"
             android:gravity="center"
             android:textSize="18sp"
-            android:text="@{`+   `+bean.name02+`(`+bean.stars02+`)`}"
+            android:text="@{`+   `+bean.name02+`(`+bean.stars02+`)`+`(`+bean.showGender(bean.gender02)+`)`}"
             android:textColor="@color/yellow_f6b42b"
             />
 
         <TextView
             android:id="@+id/result"
-            android:layout_width="145dp"
-            android:layout_height="@dimen/adapter_fuse_text_height"
-            app:layout_constraintTop_toTopOf="@+id/id"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginStart="3dp"
+            android:layout_width="180dp"
+            android:layout_height="@dimen/adapter_text_height"
+            app:layout_constraintTop_toBottomOf="@+id/id"
+            app:layout_constraintStart_toEndOf="@+id/id"
+            android:layout_marginStart="5dp"
             android:gravity="center"
             android:textSize="18sp"
-            android:text="@{`=   `+bean.result+`(`+bean.stars+`)`}"
+            android:text="@{`=   `+bean.result+`(`+bean.stars+`)`+`(`+bean.showGender(bean.gender)+`)`}"
             android:textColor="@color/green_00cc66"
             />
 
         <TextView
-            android:id="@+id/badge"
-            android:layout_width="80dp"
-            android:layout_height="@dimen/adapter_fuse_text_height"
-            app:layout_constraintTop_toBottomOf="@id/id"
+            android:id="@+id/vaporisation"
+            android:layout_width="110dp"
+            android:layout_height="@dimen/adapter_text_height"
+            app:layout_constraintTop_toBottomOf="@id/result"
             app:layout_constraintStart_toEndOf="@id/id"
             android:layout_marginStart="15dp"
             android:textSize="18sp"
-            android:text="@{`徽章：`+bean.badge}"
+            android:text="@{`月露熏香：`+bean.vaporisation}"
             android:textColor="@color/purple_cc7903db"
             />
         <TextView
-            android:id="@+id/secretDrug"
-            android:layout_width="100dp"
-            android:layout_height="@dimen/adapter_fuse_text_height"
-            app:layout_constraintTop_toTopOf="@id/badge"
-            app:layout_constraintStart_toEndOf="@id/badge"
+            android:id="@+id/money"
+            android:layout_width="120dp"
+            android:layout_height="@dimen/adapter_text_height"
+            app:layout_constraintTop_toTopOf="@id/vaporisation"
+            app:layout_constraintStart_toEndOf="@id/vaporisation"
             android:layout_marginStart="5dp"
             android:textSize="18sp"
-            android:text="@{`秘传之药：`+bean.secretDrug}"
+            android:text="@{`金钱：`+bean.money}"
             android:textColor="@color/pink_ff6666"
             />
 
