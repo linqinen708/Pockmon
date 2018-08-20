@@ -122,7 +122,7 @@ class ExternalBiographyFragment : BaseFragment() {
 
     private var pockmonAdapter: PockmonAdapter? = null
 
-    fun initRecyclerView() {
+    private fun initRecyclerView() {
         mRecyclerView.layoutManager = LinearLayoutManager(context)
         pockmonAdapter = PockmonAdapter(context)
         mRecyclerView.adapter = pockmonAdapter
@@ -165,18 +165,22 @@ class ExternalBiographyFragment : BaseFragment() {
                 "94+14", "71", "129", 209, 197, "大风，快速连击"))
         pockmonAdapter?.items?.add(PockmonBean(10020, "烈米亚", "风系", 1, 3, "绿",
                 "1", "1", "1", 23, 71, "大风，快速连击"))
+
         pockmonAdapter?.items?.add(PockmonBean(10030, "浮游龙", "风系", 61, 4, "绿",
                 "61", "54", "62", 280, 230, "大风"))
         pockmonAdapter?.items?.add(PockmonBean(10031, "浮游龙", "风系", 74, 4, "绿",
                 "78", "70", "69", 491, 235, "大风"))
         pockmonAdapter?.items?.add(PockmonBean(10032, "浮游龙", "风系", 74, 4, "蓝",
                 "87", "79", "76", 534, 258, "大风"))
+        pockmonAdapter?.items?.add(PockmonBean(10032, "浮游龙", "风系", 87, 4, "蓝",
+                "101", "91", "89", 608, 298, "大风，死亡预言，暗影突袭"))
+
         pockmonAdapter?.items?.add(PockmonBean(10040, "风灵兔", "风系", 9, 1, "蓝",
                 "1", "1", "1", 60, 57, "成长，积蓄"))
     }
 
     /**暗系*/
-    fun initDarkSeries() {
+    private fun initDarkSeries() {
         pockmonAdapter?.items?.add(PockmonBean(11001, "暗灵兔", "暗系", 29, 1, "绿",
                 "20", "18", "24", 70, 72, ""))
         pockmonAdapter?.items?.add(PockmonBean(11010, "影绒艾普", "暗系", 15, 2, "绿",
@@ -205,7 +209,7 @@ class ExternalBiographyFragment : BaseFragment() {
     }
 
     /**火系*/
-    fun initFireSeries() {
+    private fun initFireSeries() {
         pockmonAdapter?.items?.add(PockmonBean(12001, "宝宝龙", "火系", 17, 1, "蓝",
                 "17", "14", "11+3", 56, 63, "成长，积蓄，撒气"))
         pockmonAdapter?.items?.add(PockmonBean(12002, "宝宝龙", "火系", 30, 1, "蓝",
@@ -217,7 +221,7 @@ class ExternalBiographyFragment : BaseFragment() {
     }
 
     /**草系*/
-    fun initPlantSeries() {
+    private fun initPlantSeries() {
         pockmonAdapter?.items?.add(PockmonBean(13001, "妙蛙种子", "植物系", 13, 1, "紫",
                 "16", "14", "15", 96, 93, "成长"))
         pockmonAdapter?.items?.add(PockmonBean(13002, "妙蛙草", "植物系", 13, 3, "紫",
@@ -272,6 +276,10 @@ class ExternalBiographyFragment : BaseFragment() {
                 "57", "36", "24", 209, 244, 1,"撒气"))
         pockmonAdapter?.items?.add(PockmonBean(13800, "冥想花", 2,"植物系", 50, 3, "绿",
                 "70", "39", "35", 245, 234, 1,"晴天"))
+        pockmonAdapter?.items?.add(PockmonBean(13800, "冥想花", 2,"植物系", 83, 3, "绿",
+                "112", "60", "57", 386, 332, 1,"晴天"))
+        pockmonAdapter?.items?.add(PockmonBean(13800, "冥想花", 2,"植物系", 83, 3, "蓝",
+                "128", "68", "64", 427, 357, 1,"晴天"))
 
         pockmonAdapter?.items?.add(PockmonBean(13030, "幼里朵", "植物系", 19, 1, "紫（稀有）",
                 "14", "15", "20+6", 71, 81, "毒菱"))
@@ -296,7 +304,7 @@ class ExternalBiographyFragment : BaseFragment() {
     }
 
     /**兽系*/
-    fun initBeastSeries() {
+    private fun initBeastSeries() {
         pockmonAdapter?.items?.add(PockmonBean(14001, "皮皮芒奇", "兽系", 15, 1, "绿",
                 "11", "12", "11", 72, 67, ""))
         pockmonAdapter?.items?.add(PockmonBean(14010, "阿科泰克", "兽系", 37, 3, "紫",
@@ -310,7 +318,7 @@ class ExternalBiographyFragment : BaseFragment() {
     }
 
     /**雷系*/
-    fun initThunderSeries() {
+    private fun initThunderSeries() {
         pockmonAdapter?.items?.add(PockmonBean(15001, "幼雷犬", "雷系", 19, 1, "蓝",
                 "17", "11", "17", 81, 72, "成长"))
         pockmonAdapter?.items?.add(PockmonBean(15002, "幼雷犬", "雷系", 21, 1, "蓝",
@@ -325,7 +333,7 @@ class ExternalBiographyFragment : BaseFragment() {
     }
 
     /**水系*/
-    fun initWaterSeries() {
+    private fun initWaterSeries() {
         pockmonAdapter?.items?.add(PockmonBean(16001, "波企鹅", "水系", 15, 1, "蓝",
                 "15", "15", "13", 67, 75, "成长"))
         pockmonAdapter?.items?.add(PockmonBean(16002, "斗企鹅", "水系", 15, 3, "蓝",
@@ -338,12 +346,17 @@ class ExternalBiographyFragment : BaseFragment() {
                 "50", "47", "38", 194, 165, ""))
         pockmonAdapter?.items?.add(PockmonBean(16006, "首领企鹅", "水系", 61, 4, "蓝",
                 "68", "63", "57", 251, 234, "液态圈，浪潮，海啸，积蓄"))
+
         pockmonAdapter?.items?.add(PockmonBean(16010, "珀西尼", "水系", 9, 1, "蓝",
                 "1", "1", "1", 59, 56, "治愈水"))
         pockmonAdapter?.items?.add(PockmonBean(16011, "珀尼德拉", 2,"水系", 25, 3, "蓝",
                 "41", "31", "17", 169, 97, 1,"雷雨，海啸，零度雪球"))
+        pockmonAdapter?.items?.add(PockmonBean(16011, "珀尼德拉", 2,"水系", 68, 3, "蓝",
+                "94", "69", "39", 362, 183, 1,"雷雨，海啸，零度雪球"))
+
         pockmonAdapter?.items?.add(PockmonBean(16020, "珀尼德拉", 1,"水系", 37, 3, "紫（稀有）",
                 "55", "41", "31", 233, 126, 1,"治愈水"))
+
         pockmonAdapter?.items?.add(PockmonBean(16030, "加拉露", 1,"水系", 23, 2, "绿",
                 "22", "25", "17", 104, 81, 1,"治愈水，成长，撒气，液态圈"))
         pockmonAdapter?.items?.add(PockmonBean(16031, "加拉露", 1,"水系", 3, 2, "绿",
@@ -353,16 +366,21 @@ class ExternalBiographyFragment : BaseFragment() {
     }
 
     /**土系*/
-    fun initSoilSeries() {
+    private fun initSoilSeries() {
         pockmonAdapter?.items?.add(PockmonBean(17000, "岩米亚", "土系", 1, 3, "绿",
                 "1", "1", "1", 23, 71, "沙暴，石化反击，撒气"))
-        pockmonAdapter?.items?.add(PockmonBean(17001, "小岩熊", "土系", 5, 1, "绿",
-                "1", "1", "1", 60, 55, "成长，撒气"))
+        pockmonAdapter?.items?.add(PockmonBean(17000, "岩米亚", 1,"土系", 71, 3, "蓝",
+                "87", "99", "39", 342, 163, 0,"沙暴，石化反击，撒气"))
+
+        pockmonAdapter?.items?.add(PockmonBean(17010, "小岩熊", "土系", 5, 1, "绿",
+                "1", "1", "1", 60, 55, 1,"成长，撒气"))
+
+        pockmonAdapter?.items?.add(PockmonBean(17020, "劳斯罗", "土系", 28, 3, "蓝",
+                "33", "38", "30", 200, 97, 1,""))
     }
 
     /**飞行系*/
-
-    fun initFlySeries() {
+    private fun initFlySeries() {
         pockmonAdapter?.items?.add(PockmonBean(18000, "格里姆斯", "飞行系", 26, 2, "绿",
                 "24", "23", "31", 69, 95, "羽栖，暗影突袭"))
         pockmonAdapter?.items?.add(PockmonBean(18001, "格里芬", "飞行系", 26, 3, "绿",
@@ -387,7 +405,7 @@ class ExternalBiographyFragment : BaseFragment() {
 
 
 
-    fun initSpinner() {
+    private fun initSpinner() {
 
         val array: Array<String> = arrayOf("默认", "等级（低到高）", "等级（高到低）", "种类")
 
@@ -405,10 +423,10 @@ class ExternalBiographyFragment : BaseFragment() {
             override fun onItemSelected(adapterView: AdapterView<*>, view: View, position: Int, l: Long) {
 
                 LogT.i("position:" + position)
-                when {
-                    position == 0 -> Collections.sort(pockmonAdapter?.items) { o1, o2 -> o2.level - o1.level }
-                    position == 1 -> Collections.sort(pockmonAdapter?.items)
-                    position == 2 -> {
+                when (position) {
+                    0 -> Collections.sort(pockmonAdapter?.items) { o1, o2 -> o2.level - o1.level }
+                    1 -> Collections.sort(pockmonAdapter?.items)
+                    2 -> {
                         Collections.sort(pockmonAdapter?.items) { o1, o2 -> o2.level - o1.level }
                     }
                 }

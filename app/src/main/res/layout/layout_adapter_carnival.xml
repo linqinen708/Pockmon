@@ -8,7 +8,7 @@
     <data>
         <variable
             name="bean"
-            type="com.linqinen708.pockmon.fragment.fuse.bean.FuseBean"/>
+            type="com.linqinen708.pockmon.fragment.carnival.CarnivalBean"/>
 
     </data>
 
@@ -36,32 +36,29 @@
             app:layout_constraintStart_toEndOf="@id/id"
             android:gravity="center"
             android:textSize="18sp"
-            android:text="@{bean.name01+`(`+bean.stars01+`)`}"
             android:textColor="@color/blue_5AA2ED"
             />
         <TextView
             android:id="@+id/name02"
-            android:layout_width="125dp"
+            android:layout_width="120dp"
             android:layout_height="@dimen/adapter_fuse_text_height"
             app:layout_constraintTop_toTopOf="@id/id"
             app:layout_constraintStart_toEndOf="@id/name01"
             android:layout_marginStart="3dp"
             android:gravity="center"
             android:textSize="18sp"
-            android:text="@{`+  `+bean.name02+`(`+bean.stars02+`)`}"
             android:textColor="@color/yellow_f6b42b"
             />
 
         <TextView
             android:id="@+id/result"
-            android:layout_width="140dp"
+            android:layout_width="145dp"
             android:layout_height="@dimen/adapter_fuse_text_height"
             app:layout_constraintTop_toTopOf="@+id/id"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginStart="3dp"
             android:gravity="center"
             android:textSize="18sp"
-            android:text="@{`=  `+bean.result+`(`+bean.stars+`)`}"
             android:textColor="@color/green_00cc66"
             />
 
@@ -73,7 +70,6 @@
             app:layout_constraintStart_toEndOf="@id/id"
             android:layout_marginStart="15dp"
             android:textSize="18sp"
-            android:text="@{`徽章：`+bean.badge}"
             android:textColor="@color/purple_cc7903db"
             />
         <TextView
@@ -84,7 +80,6 @@
             app:layout_constraintStart_toEndOf="@id/badge"
             android:layout_marginStart="5dp"
             android:textSize="18sp"
-            android:text="@{`秘传之药：`+bean.secretDrug}"
             android:textColor="@color/pink_ff6666"
             />
 
