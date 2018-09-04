@@ -194,9 +194,17 @@ class OfflineFragment : Fragment() {
 
         pockmonAdapter?.items?.add(PockmonBean(350, "豌豆苗", 18, 1,"蓝",
                 "1", "1", "1", 93, 59,"毒菱，神秘草"))
+        pockmonAdapter?.items?.add(PockmonBean(350, "豌豆苗", 35, 1,"蓝",
+                "25", "24", "24+12", 150, 84,"毒菱，神秘草"))
+        pockmonAdapter?.items?.add(PockmonBean(350, "连队豌豆", 35, 3,"蓝",
+                "35", "32", "26+13", 198, 105,"毒菱，神秘草"))
 
-        pockmonAdapter?.items?.add(PockmonBean(350, "仙人掌", 7, 1,"蓝",
+        pockmonAdapter?.items?.add(PockmonBean(350, "仙人掌", 7, 1,"变异蓝",
                 "1", "1", "1", 63, 49,"毒菱，吸收，积蓄"))
+        pockmonAdapter?.items?.add(PockmonBean(350, "仙人掌", 36, 1,"变异蓝",
+                "33", "26", "30", 175, 105,"毒菱，吸收，积蓄"))
+        pockmonAdapter?.items?.add(PockmonBean(350, "大仙人掌", 36, 3,"变异蓝",
+                "41", "28", "33", 225, 122,""))
 
         pockmonAdapter?.items?.add(PockmonBean(370, "大菊花", 52, "紫", "44+6", "43", "41", 219, 145))
         pockmonAdapter?.items?.add(PockmonBean(358, "始祖大树", 66, "金", "75", "61", "48", 323, 203))
@@ -241,15 +249,35 @@ class OfflineFragment : Fragment() {
     private fun initWaterSeries() {
         pockmonAdapter?.items?.add(PockmonBean(500, "急冻鸟", 58, "变异绿", "59", "53", "60", 238, 168))
         pockmonAdapter?.items?.add(PockmonBean(501, "急冻鸟", 76, "变异绿", "72", "66", "74", 305, 210))
-        pockmonAdapter?.items?.add(PockmonBean(509, "暴鲤龙", 7, "变异绿", "19", "15", "15", 56, 58))
-        pockmonAdapter?.items?.add(PockmonBean(510, "暴鲤龙", 16, "变异绿", "26", "20", "20", 82, 75))
-        pockmonAdapter?.items?.add(PockmonBean(511, "暴鲤龙", 25, "变异绿", "32", "26", "24", 107, 92))
-        pockmonAdapter?.items?.add(PockmonBean(512, "暴鲤龙", 37, 3, "变异绿", "40", "32", "30", 107, 92))
-        pockmonAdapter?.items?.add(PockmonBean(520, "鲤鱼王", 25, "金", "21", "19", "20", 76, 78))
-        pockmonAdapter?.items?.add(PockmonBean(521, "暴鲤龙", 25, "金", "33", "26", "24", 118, 102))
-        pockmonAdapter?.items?.add(PockmonBean(522, "暴鲤龙", 31, "金", "37", "30", "28", 139, 116))
-        pockmonAdapter?.items?.add(PockmonBean(523, "暴鲤龙", 40, "金", "45", "36", "33", 171, 138))
-        pockmonAdapter?.items?.add(PockmonBean(524, "暴鲤龙", 48, "金", "51", "41", "38", 201, 156))
+        pockmonAdapter?.items?.add(PockmonBean(350, "鲤鱼王", 25, 1,"绿",
+                "16", "14", "18", 85, 71,""))
+        pockmonAdapter?.items?.add(PockmonBean(350, "暴鲤龙", 25, 3,"绿",
+                "26", "21", "23", 140, 95,""))
+        pockmonAdapter?.items?.add(PockmonBean(350, "暴鲤龙", 39, 3,"蓝",
+                "36", "30", "33", 219, 135,""))
+        pockmonAdapter?.items?.add(PockmonBean(350, "暴鲤龙", 55, 3,"蓝",
+                "47", "39", "44", 296, 175,""))
+        pockmonAdapter?.items?.add(PockmonBean(350, "红暴鲤龙", 55, 4,"蓝",
+                "54", "43", "48", 321, 194,""))
+
+        pockmonAdapter?.items?.add(PockmonBean(509, "暴鲤龙", 7, "变异绿",
+                "19", "15", "15", 56, 58))
+        pockmonAdapter?.items?.add(PockmonBean(510, "暴鲤龙", 16, "变异绿",
+                "26", "20", "20", 82, 75))
+        pockmonAdapter?.items?.add(PockmonBean(511, "暴鲤龙", 25, "变异绿",
+                "32", "26", "24", 107, 92))
+        pockmonAdapter?.items?.add(PockmonBean(512, "暴鲤龙", 37, 3, "变异绿",
+                "40", "32", "30", 107, 92))
+        pockmonAdapter?.items?.add(PockmonBean(520, "鲤鱼王", 25, "金",
+                "21", "19", "20", 76, 78))
+        pockmonAdapter?.items?.add(PockmonBean(521, "暴鲤龙", 25, "金",
+                "33", "26", "24", 118, 102))
+        pockmonAdapter?.items?.add(PockmonBean(522, "暴鲤龙", 31, "金",
+                "37", "30", "28", 139, 116))
+        pockmonAdapter?.items?.add(PockmonBean(523, "暴鲤龙", 40, "金",
+                "45", "36", "33", 171, 138))
+        pockmonAdapter?.items?.add(PockmonBean(524, "暴鲤龙", 48, "金",
+                "51", "41", "38", 201, 156))
         pockmonAdapter?.items?.add(PockmonBean(525, "暴鲤龙", 55, 3, "金", "57", "45", "42", 226, 174))
         pockmonAdapter?.items?.add(PockmonBean(526, "暴鲤龙", 61, 3, "金", "61", "49", "45", 246, 188))
         pockmonAdapter?.items?.add(PockmonBean(529, "红暴鲤龙", 66, "蓝", "59", "50", "53", 354, 217))
@@ -279,6 +307,20 @@ class OfflineFragment : Fragment() {
         pockmonAdapter?.items?.add(PockmonBean(201, "格林姆斯", 24, "蓝", "21", "18", "21", 69, 76))
         pockmonAdapter?.items?.add(PockmonBean(210, "尤尼库", 28, "蓝", "23", "16", "26", 96, 87))
         pockmonAdapter?.items?.add(PockmonBean(215, "尤尼库斯", 35, 4, "紫", "34", "28", "41", 121, 121))
+
+        pockmonAdapter?.items?.add(PockmonBean(350, "波波", 17, 1,"紫",
+                "16", "14", "25", 52, 67,"羽栖，吸收，龙卷"))
+        pockmonAdapter?.items?.add(PockmonBean(350, "波波", 25, 1,"紫",
+                "20", "17", "31", 66, 82,"羽栖，吸收，龙卷"))
+        pockmonAdapter?.items?.add(PockmonBean(350, "比比鸟", 17, 2,"紫",
+                "20", "15", "29", 56, 71,"龙卷"))
+        pockmonAdapter?.items?.add(PockmonBean(350, "比比鸟", 25, 2,"紫",
+                "25", "19", "35", 72, 86,"电光石火，狂风"))
+        pockmonAdapter?.items?.add(PockmonBean(350, "比比鸟", 37, 2,"紫",
+                "31", "25", "46", 96, 108,"电光石火，狂风"))
+        pockmonAdapter?.items?.add(PockmonBean(350, "比雕", 37, 3,"紫",
+                "34", "27", "48", 103, 114,""))
+
         pockmonAdapter?.items?.add(PockmonBean(220, "比比鸟", 46, 2, "变异绿", "44", "31", "55", 144, 153))
         pockmonAdapter?.items?.add(PockmonBean(221, "比雕", 46, 3, "变异绿", "47", "35", "58", 155, 160))
         pockmonAdapter?.items?.add(PockmonBean(222, "比雕", 55, 3, "变异绿", "53", "39", "66", 181, 182))
@@ -292,9 +334,15 @@ class OfflineFragment : Fragment() {
         pockmonAdapter?.items?.add(PockmonBean(261, "凤王", 34, 5, "紫", "46", "35", "38", 144, 138))
         pockmonAdapter?.items?.add(PockmonBean(262, "凤王", 52, 5, "紫", "61", "48", "51", 204, 186))
         pockmonAdapter?.items?.add(PockmonBean(263, "凤王", 66, 5, "紫", "73", "58", "61", 250, 223))
-        pockmonAdapter?.items?.add(PockmonBean(270, "火焰鸟", 69, 4, "绿", "55", "41", "61", 242, 169))
-        pockmonAdapter?.items?.add(PockmonBean(271, "火焰鸟", 69, 4, "蓝", "62", "46", "68", 266, 186))
+        pockmonAdapter?.items?.add(PockmonBean(270, "火焰鸟", 69, 4, "绿",
+                "55", "41", "61", 242, 169))
+        pockmonAdapter?.items?.add(PockmonBean(271, "火焰鸟", 69, 4, "蓝",
+                "62", "46", "68", 266, 186))
 
+        pockmonAdapter?.items?.add(PockmonBean(280, "火焰鸟", 37, 4,"变异绿",
+                "49", "29+4", "45", 140, 114,""))
+        pockmonAdapter?.items?.add(PockmonBean(280, "火焰鸟", 37, 4,"变异蓝",
+                "53", "32+4", "49", 154, 123,""))
     }
 
     /**金属系*/
@@ -321,5 +369,9 @@ class OfflineFragment : Fragment() {
         pockmonAdapter?.items?.add(PockmonBean(461, "铁蚁", 68, 2, "蓝", "51", "44", "47", 210, 190))
         pockmonAdapter?.items?.add(PockmonBean(462, "铁蚁", 75, 2, "蓝", "56", "47", "51", 230, 205))
 
+        pockmonAdapter?.items?.add(PockmonBean(470, "盾甲龙", 29, 1,"蓝",
+                "25", "23", "21", 92, 85,"吸收"))
+        pockmonAdapter?.items?.add(PockmonBean(470, "护城龙", 29, 2,"蓝",
+                "30", "27", "24", 101, 93,""))
     }
 }
